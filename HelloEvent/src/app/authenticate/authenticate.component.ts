@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { Form, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -5,12 +6,14 @@ import { Router } from '@angular/router';
 import { Jwt } from '../model/jwt'; 
 import { JwtService } from '../serivce/jwt.service';
 
+
 @Component({
   selector: 'app-authenticate',
   templateUrl: './authenticate.component.html',
   styleUrls: ['./authenticate.component.css']
 })
 export class AuthenticateComponent {
+
   loginForm!: FormGroup;
 
   constructor(
@@ -41,7 +44,9 @@ export class AuthenticateComponent {
       },
       error => {
         console.error('Error during login:', error); // Log any errors
+
       }
     );
   }
 }
+

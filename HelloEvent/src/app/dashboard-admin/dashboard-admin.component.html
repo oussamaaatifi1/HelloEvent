@@ -1,1 +1,102 @@
-<h1>jebejf</h1>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@1.6.0/dist/flowbite.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <nav class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <div class="text-xl font-semibold">Admin Dashboard</div>
+      <div class="space-x-4">
+        <a href="#" class="hover:text-gray-300">Profile</a>
+        <a href="#" class="hover:text-gray-300">Settings</a>
+        <a href="#" class="hover:text-gray-300">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="flex flex-col min-h-screen p-6">
+    <div class="container mx-auto">
+      <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+        <h2 class="text-2xl font-semibold mb-4">Statistics</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-gray-100 p-4 rounded-lg shadow-lg">
+            <h3 class="text-lg font-semibold">Total Users</h3>
+            <p class="text-3xl">{{ userCount }}</p>
+          </div>
+          <div class="bg-gray-100 p-4 rounded-lg shadow-lg">
+            <h3 class="text-lg font-semibold">Total Events</h3>
+            <p class="text-3xl">{{ eventCount }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg mb-6 flex items-center">
+        <img src="https://via.placeholder.com/50" alt="User Logo" class="w-16 h-16 rounded-full border-2 border-gray-300 mr-4">
+        <div>
+          <h2 class="text-2xl font-semibold mb-1">John Doe</h2>
+          <p class="text-lg text-gray-600">john.doe@example.com</p>
+          <p class="text-lg text-gray-500">Member Since: January 2022</p>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+        <h2 class="text-2xl font-semibold mb-4">Reserved Events</h2>
+        <table class="w-full text-left bg-gray-100 border border-gray-300 rounded-lg">
+          <thead>
+            <tr class="bg-gray-200">
+              <th class="p-4">Event Name</th>
+              <th class="p-4">Date</th>
+              <th class="p-4">Location</th>
+              <th class="p-4">Status</th>
+              <th class="p-4">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="p-4">Event 1</td>
+              <td class="p-4">August 1, 2024</td>
+              <td class="p-4">Location 1</td>
+              <td class="p-4">Reserved</td>
+              <td class="p-4">
+                <button class="bg-red-600 text-white py-1 px-2 rounded hover:bg-red-700 focus:outline-none" onclick="deleteEvent(1)">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="p-4">Event 2</td>
+              <td class="p-4">August 2, 2024</td>
+              <td class="p-4">Location 2</td>
+              <td class="p-4">Reserved</td>
+              <td class="p-4">
+                <button class="bg-red-600 text-white py-1 px-2 rounded hover:bg-red-700 focus:outline-none" onclick="deleteEvent(2)">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="p-4">Event 3</td>
+              <td class="p-4">August 3, 2024</td>
+              <td class="p-4">Location 3</td>
+              <td class="p-4">Reserved</td>
+              <td class="p-4">
+                <button class="bg-red-600 text-white py-1 px-2 rounded hover:bg-red-700 focus:outline-none" onclick="deleteEvent(3)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function deleteEvent(eventId) {
+      // Add your delete logic here
+      alert(`Delete event with ID: ${eventId}`);
+    }
+  </script>
+</body>
+</html>
+
