@@ -9,7 +9,7 @@ import { Jwt } from "src/app/model/jwt";
 })
 export class ServiceEventsService {
 
-  private BASE_URL = "http://localhost:8082/api/auth/"; // Use a string for BASE_URL
+  private BASE_URL = "http://localhost:8084/api/auth/"; // Use a string for BASE_URL
 
 
   constructor(private http: HttpClient) { }
