@@ -5,7 +5,10 @@ import { RegisterAdminComponent } from './register-admin/register-admin.componen
 import { AuthenticateAdminComponent } from './authenticate-admin/authenticate-admin.component';
 import { AuthenticateComponent } from './authenticate/authenticate.component';
 import { HomeComponent } from './home/home.component';
+<<<<<<< HEAD
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
+=======
+>>>>>>> e6c6d1f33a4a524a617dea27cea97846350d8fed
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,7 +16,10 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'admin/register', component: RegisterAdminComponent },
   { path: 'admin/login', component: AuthenticateAdminComponent },
+<<<<<<< HEAD
   { path: 'admin/dashboard', component: DashboardAdminComponent },
+=======
+>>>>>>> e6c6d1f33a4a524a617dea27cea97846350d8fed
 ];
 
 @NgModule({
